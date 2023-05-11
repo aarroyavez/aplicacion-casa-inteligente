@@ -27,12 +27,20 @@ export function SmartHome() {
   console.log(lights);
 
   return (
-    <div>
-      <MainControls />
+    <section
+    style={{
+      fontSize: "5rem",
+      display: "grid",
+      gridTemplateColumns: "min-content min-content",
+      gap: "3px",
+      alignItems: "center",
+      paddingTop: "1rem",
+    }}>
+      
       {lights.map((isOn, index) => (
         <Light key={index} id={index} />
       ))}
-    </div>
+    </section>
   );
 }
 

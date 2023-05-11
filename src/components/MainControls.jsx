@@ -6,8 +6,9 @@ export function MainControls() {
 
   return (
     <div>
-      <button onClick={() => dispatch({ type: "allOn" })}>All On</button>
       <button onClick={() => dispatch({ type: "allOff" })}>All Off</button>
+      <button onClick={() => dispatch({ type: "allOn" })}>All On</button>
+      
     </div>
   );
 }

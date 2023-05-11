@@ -96,21 +96,20 @@ export function Light({ id }) {
   };
 
   return (
-    <div className="light">
-      <div
-        className={`light__bulb ${isOn ? "on" : "off"}`}
-        onClick={handleOnToggle}
-        style={{
-          border: "solid 1px gray",
-          padding: "2rem",
-          fontSize: "3rem",
-          background: isOn ? "#eee" : "#444",
-        }}
-      >
-        {isOn ? "💡" : "⚫️"}
-      </div>
-      <div className="light__id">{id}</div>
-    </div>
+    
+    <button
+    data-testid={`light-${id}`}
+    id={id}
+    onClick={handleOnToggle}
+    style={{
+      border: "solid 1px gray",
+      padding: "2rem",
+      fontSize: "3rem",
+      background: isOn ? "#eee" : "#444",
+    }}
+  >
+    {isOn ? "💡" : "⚫️"}
+  </button>
   );
 }
 
