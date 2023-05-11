@@ -6,7 +6,7 @@ import { Light } from "./components/Light";
 
 export function App() {
   const [{ lights }, dispatch] = useReducer(smartDevicesReducer, {
-    lights: [false, false, true],
+    lights: [true, false, false],
   });
 
   return (
